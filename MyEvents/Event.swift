@@ -10,6 +10,7 @@ import EventKit
 struct Event: Codable {
   let start: Date
   let end: Date
+  let availability: String
 
   static func checkAuthorizationStatus() async -> Bool {
     let status = EKEventStore.authorizationStatus(for: .event)
